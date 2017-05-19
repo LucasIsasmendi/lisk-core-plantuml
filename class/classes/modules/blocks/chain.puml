@@ -1,0 +1,24 @@
+@startuml
+class Chain < modules > {
+  - self
+  - __private: {}
+  .. library ..
+  - logic.block
+  - logic.transaction
+  - db
+  - genesisblock
+  - logger
+  - bus
+  - balancesSequence
+  .. modules ..
+  - accounts
+  - blocks
+  - rounds
+  - transactions
+  -- Methods --
+  + Chain (logger, block, transaction, db,
+  genesisblock, bus, balancesSequence)
+  ~ PENDING
+  + onBind (scope)
+}
+@enduml

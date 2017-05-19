@@ -1,0 +1,6 @@
+@startuml
+!include ../../classes/modules/rounds.puml
+!include ../../classes/logic/round.puml
+
+Rounds ^-- Round : new
+@enduml

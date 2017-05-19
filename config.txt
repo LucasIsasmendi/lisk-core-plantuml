@@ -1,0 +1,5 @@
+skinparam class {
+	BackgroundColor AliceBlue|LightBlue
+	ArrowColor Black
+	BorderColor DarkBlue
+}

@@ -1,0 +1,32 @@
+@startuml
+class Account < logic > {
+  - __private: {}
+  - self: this
+  .. library ..
+  - logger
+  .. this ..
+  + table: mem_accounts
+  + model
+  + fields
+  + binary
+  + conv
+  + editable
+  + filter
+  + scope
+  .. this.scope ..
+  + db
+  + schema
+  -- Methods --
+  + Account(db, schema, logger, cb)
+  + createTables(cb)
+  + removeTables(cb)
+  + objectNormalize(account)
+  + verifyPublicKey(publicKey)
+  + toDB(raw)
+  + get(filter, fields, cb)
+  + getAll(filter, fields, cb)
+  + set(address, fields, cb)
+  + merge(address, diff, cb)
+  + remove(address, cb)
+}
+@endtuml

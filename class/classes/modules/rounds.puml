@@ -1,0 +1,32 @@
+@startuml
+class Rounds < module > {
+  - __private: {}
+  - self: this
+  .. library ..
+  - logger
+  - db
+  - bus
+  - network
+  - config.loading.snapshot
+  .. modules ..
+  - blocks
+  - accounts
+  - delegates
+  -- Methods --
+  + Rounds (cb, scope)
+  + loaded ()
+  + ticking ()
+  + calc (height)
+  + flush (round, cb)
+  + directionSwap (direction, lastBlock, cb)
+  + backwardTick (block, previousBlock, done)
+  + tick (block, done)
+  + sandboxApi (call, args, cb)
+  + onBind (scope)
+  + onBlockchainReady ()
+  + onFinishRound (round)
+  + cleanup (cb)
+  - getOutsiders (scope, cb)
+  - sumRound (round, cb)
+}
+@enduml

@@ -1,0 +1,25 @@
+@startuml
+
+!include ./blocks/api.puml
+!include ./blocks/chain.puml
+!include ./blocks/process.puml
+!include ./blocks/utils.puml
+!include ./blocks/verify.puml
+
+class Blocks < modules > {
+  - __private: {}
+  - self: this
+  .. this.submodules ..
+  .. library ..
+  - logger
+  -- Methods --
+  + Blocks(cb, scope)
+}
+
+Blocks ^-- API : new
+Blocks ^-- Verify : new
+Blocks ^-- Process : new
+Blocks ^-- Utils : new
+Blocks ^-- Chain : new
+
+@enduml

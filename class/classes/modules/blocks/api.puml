@@ -1,0 +1,26 @@
+@startuml
+class API < modules > {
+  - self
+  - blockReward: new BlockReward()
+  - __private: {}
+  + public var
+  .. library ..
+  - logger
+  - db
+  - logic.block
+  - schema
+  - dbSequence
+  .. modules ..
+  - system
+  - blocks
+  -
+  -- Methods --
+  - method_Private()
+  + API (logger, db, block, schema, dbSequence)
+  -- API --
+  .. internal ..
+  - api_Private()
+  .. shared ..
+  + api_Public()
+}
+@enduml

@@ -1,0 +1,27 @@
+@startuml
+class Sql < module > {
+  - __private: {}
+  - self: this
+  + shared: {}
+  .. library ..
+  - logger
+  - db
+  -- Methods --
+  + Sql (cb, scope)
+  - escape (what)
+  - escape2 (str)
+  - pass (obj, dappid)
+  - query (action, config, cb)
+  + createTables (dappid, config, cb)
+  + dropTables (dappid, config, cb)
+  + sandboxApi (call, args, cb)
+  + onBind (scope)
+  + onBlockchainReady ()
+  .. shared ..
+  + select (body, dappid, cb)
+  + batch (body, dappid, cb)
+  + insert (body, dappid, cb)
+  + update (body, dappid, cb)
+  + remove (body, dappid, cb)
+}
+@enduml

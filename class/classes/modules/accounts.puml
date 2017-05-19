@@ -1,0 +1,35 @@
+@startuml
+class Accounts < modules > {
+  - blockReward: new BlockReward()
+  - assetTypes[3]: new Vote(logger, schema)
+  - __private: {}
+  - shared: {}
+  - self: this
+  .. library ..
+  - ed
+  - schema
+  - balancesSequence
+  - logic.account
+  - logic.transaction
+  .. modules ..
+  - delegates
+  - accounts
+  - transactions
+  --
+  + Accounts(cb, scope)
+  - openAccount(secret, cb)
+  + generateAddressByPublicKey(publicKey)
+  + getAccount(filter, fields, cb)
+  + getAccounts(filter, fields, cb)
+  + setAccountAndGet(data, cb)
+  + mergeAccountAndGet(data, cb)
+  + sandboxApi(call, args, cb)
+  + onBind(scope)
+  + isLoaded()
+  -- API --
+  .. internal ..
+  ~ Pending
+  .. shared ..
+  ~ Pending
+}
+@enduml

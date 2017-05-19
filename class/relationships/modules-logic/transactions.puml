@@ -1,0 +1,8 @@
+@startuml
+!include ../../classes/modules/transactions.puml
+!include ../../classes/logic/transaction.puml
+
+Transactions ^-- Transaction
+Transactions ^-- TransactionPool : new
+Transactions ^-- Transfer : new
+@enduml

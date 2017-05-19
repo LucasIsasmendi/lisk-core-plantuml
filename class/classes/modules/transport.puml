@@ -1,0 +1,32 @@
+@startuml
+class Transport < modules > {
+  - shared: {}
+  - __private: {}
+  - self: this
+  .. library ..
+  - logger
+  - db
+  - bus
+  - schema
+  - network
+  - balancesSequence
+  - logic.block
+  - logic.transaction
+  - logic.peers
+  - config.peers.options.timeout
+  .. modules ..
+  - blocks
+  - dapps
+  - peers
+  - multisignatures
+  - transactions
+  - system
+  -- Methods --
+  + Transport (cb, scope)
+  ~ PENDING
+  -- API --
+  .. shared ..
+  + api_Public()
+  ~ PENDING
+}
+@enduml

@@ -1,0 +1,26 @@
+@startuml
+class Block <logic> {
+  + dbTable: blocks
+  + dbFields
+  .. __private ..
+  - blockReward: new BlockReward()
+  .. scope ..
+  + ed
+  + schema
+  + transaction
+  -- Methods --
+  + Block (ed, schema, transaction, cb)
+  + create (data)
+  + sign (block, keypair)
+  + getBytes (block)
+  + verifySignature (block)
+  + dbSave (block)
+  + objectNormalize (block)
+  + getId (block)
+  + getHash (block)
+  + calculateFee (block)
+  + dbRead (raw)
+  .. __private ..
+  - getAddressByPublicKey (publicKey)
+}
+@endtuml

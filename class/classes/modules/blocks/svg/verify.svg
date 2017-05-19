@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="274px" preserveAspectRatio="none" style="width:252px;height:274px;" version="1.1" viewBox="0 0 252 274" width="252px" zoomAndPan="magnify"><defs><linearGradient id="gzx64bm6ryhul0" x1="0%" x2="100%" y1="50%" y2="50%"><stop offset="0%" stop-color="#F0F8FF"/><stop offset="100%" stop-color="#ADD8E6"/></linearGradient><filter height="300%" id="fzx64bm6ryhul" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--class Verify--><rect fill="url(#gzx64bm6ryhul0)" filter="url(#fzx64bm6ryhul)" height="256.875" id="Verify" style="stroke: #00008B; stroke-width: 1.5;" width="237" x="6" y="8.5"/><ellipse cx="71.25" cy="24.5" fill="#ADD1B2" rx="11" ry="11" style="stroke: #00008B; stroke-width: 1.0;"/><path d="M74.2188,30.1406 Q73.6406,30.4375 73,30.5859 Q72.3594,30.7344 71.6563,30.7344 Q69.1563,30.7344 67.8359,29.0859 Q66.5156,27.4375 66.5156,24.3125 Q66.5156,21.1875 67.8359,19.5313 Q69.1563,17.875 71.6563,17.875 Q72.3594,17.875 73.0078,18.0313 Q73.6563,18.1875 74.2188,18.4844 L74.2188,21.2031 Q73.5938,20.625 73,20.3516 Q72.4063,20.0781 71.7813,20.0781 Q70.4375,20.0781 69.75,21.1484 Q69.0625,22.2188 69.0625,24.3125 Q69.0625,26.4063 69.75,27.4766 Q70.4375,28.5469 71.7813,28.5469 Q72.4063,28.5469 73,28.2734 Q73.5938,28 74.2188,27.4219 L74.2188,30.1406 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="34" x="91.75" y="28.6543">Verify</text><rect fill="#FFFFFF" height="15.9688" style="stroke: #000000; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" width="62" x="184" y="5.5"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="52" x="189" y="17.6387">modules</text><line style="stroke: #00008B; stroke-width: 1.5;" x1="7" x2="242" y1="40.5" y2="40.5"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="14" y="49.4023"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="21" x="26" y="54.7104">self</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="14" y="62.207"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="73" x="26" y="67.5151">__private: {}</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="14" y="91.8164"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="36" x="26" y="97.1245">logger</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="14" y="104.6211"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="59" x="26" y="109.9292">logic.block</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="14" y="117.4258"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="94" x="26" y="122.7339">logic.transaction</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="14" y="130.2305"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="14" x="26" y="135.5386">db</text><line style="stroke: #00008B; stroke-width: 1.0; stroke-dasharray: 1.0,2.0;" x1="7" x2="106.5" y1="80.5117" y2="80.5117"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="36" x="106.5" y="83.8198">library</text><line style="stroke: #00008B; stroke-width: 1.0; stroke-dasharray: 1.0,2.0;" x1="142.5" x2="242" y1="80.5117" y2="80.5117"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="14" y="159.8398"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="51" x="26" y="165.1479">accounts</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="14" y="172.6445"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="36" x="26" y="177.9526">blocks</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="14" y="185.4492"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="56" x="26" y="190.7573">delegates</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="14" y="198.2539"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="71" x="26" y="203.562">transactions</text><line style="stroke: #00008B; stroke-width: 1.0; stroke-dasharray: 1.0,2.0;" x1="7" x2="100" y1="148.5352" y2="148.5352"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="49" x="100" y="151.8433">modules</text><line style="stroke: #00008B; stroke-width: 1.0; stroke-dasharray: 1.0,2.0;" x1="149" x2="242" y1="148.5352" y2="148.5352"/><ellipse cx="17" cy="230.8633" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="211" x="26" y="233.1714">Verify (logger, block, transaction, db)</text><polygon fill="none" points="17,239.668,13,245.668,21,245.668" style="stroke: #1963A0; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="50" x="26" y="245.9761">PENDING</text><ellipse cx="17" cy="256.4727" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="85" x="26" y="258.7808">onBind (scope)</text><line style="stroke: #00008B; stroke-width: 1.0;" x1="7" x2="100.5" y1="216.5586" y2="216.5586"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="48" x="100.5" y="219.8667">Methods</text><line style="stroke: #00008B; stroke-width: 1.0;" x1="148.5" x2="242" y1="216.5586" y2="216.5586"/><!--
+@startuml
+skinparam class {
+	BackgroundColor AliceBlue|LightBlue
+	ArrowColor Black
+	BorderColor DarkBlue
+}
+class Verify < modules > {
+  - self
+  - __private: {}
+  .. library ..
+  - logger
+  - logic.block
+  - logic.transaction
+  - db
+  .. modules ..
+  - accounts
+  - blocks
+  - delegates
+  - transactions
+  - - Methods - -
+  + Verify (logger, block, transaction, db)
+  ~ PENDING
+  + onBind (scope)
+}
+@enduml
+
+PlantUML version 1.2017.12(Wed Apr 26 13:06:36 ART 2017)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_131-b11
+Operating System: Linux
+OS Version: 3.13.0-119-generic
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

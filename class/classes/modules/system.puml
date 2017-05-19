@@ -1,0 +1,21 @@
+@startuml
+class Name < System > {
+  - __private: {}
+  - self: this
+  .. library ..
+  - logger
+  - db
+  - nonce
+  - config.version
+  - config.port
+  - config.nethash
+  - config.minVersion
+  .. modules ..
+  - blocks
+  - transport
+  -- Methods --
+  + System (cb, scope)
+  ~ PENDING
+  + onBind (scope)
+}
+@enduml

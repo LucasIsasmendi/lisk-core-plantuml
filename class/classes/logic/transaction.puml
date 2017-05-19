@@ -1,0 +1,47 @@
+@startuml
+class Transaction < logic > {
+  - __private: {}
+  - self: this
+  - modules
+  + dbTable: trs
+  + dbFields
+  + schema: Transaction
+  .. this.scope ..
+  - db
+  - ed
+  - schema
+  - genesisblock
+  - account
+  - logger
+  .. modules object ..
+  - rounds
+  -- Methods --
+  + Transaction (db, ed, schema, genesisblock, account,
+  logger, cb)
+  + create (data)
+  + attachAssetType (typeId, instance)
+  + sign (keypair, trs)
+  + multisign (keypair, trs)
+  + getId (trs)
+  + getHash (trs)
+  + getBytes (trs, skipSignature, skipSecondSignature)
+  + ready (trs, sender)
+  + countById (trs, cb)
+  + checkConfirmed (trs, cb)
+  + checkBalance (amount, balance, trs, sender)
+  + process (trs, sender, requester, cb)
+  + verify (trs, sender, requester, cb)
+  + verifySignature (trs, publicKey, signature)
+  + verifySecondSignature (trs, publicKey, signature)
+  + verifyBytes (bytes, publicKey, signature)
+  + apply (trs, block, sender, cb)
+  + undo (trs, block, sender, cb)
+  + applyUnconfirmed (trs, sender, requester, cb)
+  + undoUnconfirmed (trs, sender, cb)
+  + dbSave (trs)
+  + afterSave (trs, cb)
+  + objectNormalize (trs)
+  + dbRead (raw)
+  + bindModules (scope)
+}
+@endtuml

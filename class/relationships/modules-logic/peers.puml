@@ -1,0 +1,6 @@
+@startuml
+!include ../../classes/modules/peers.puml
+!include ../../classes/logic/peers.puml
+
+Peers ^.. Peers_ : implements
+@enduml

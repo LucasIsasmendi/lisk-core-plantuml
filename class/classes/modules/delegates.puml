@@ -1,0 +1,58 @@
+@startuml
+class Delegates < module > {
+  - assetTypes[2]: new Delegate(schema)
+  - __private: {}
+  - self: this
+  .. library..
+  - logger
+  - sequence
+  - ed
+  - db
+  - network
+  - schema
+  - balancesSequence
+  - logic.transaction
+  - config.forging.secret
+  - config.forging.access.whiteList
+  .. modules..
+  - loader
+  - rounds
+  - accounts
+  - blocks
+  - transport
+  - transactions
+  - delegates
+  -- Methods --
+  + Delegates(cb, scope)
+  - getKeysSortByVote(cb)
+  - getBlockSlotData(slot, height, cb
+  - forge(cb)
+  - checkDelegates(publicKey, votes, state, cb)
+  - loadDelegates(cb)
+  + generateDelegateList(height, cb)
+  + getDelegates(query, cb)
+  + checkConfirmedDelegates(publicKey, votes, cb)
+  + checkUnconfirmedDelegates(publicKey, votes, cb)
+  + fork(block, cause)
+  + validateBlockSlot(block, cb)
+  + sandboxApi(call, args, cb)
+  + onBind(scope)
+  -- API --
+  .. internal ..
+  - forgingEnable(secret, publicKey, cb)
+  - forgingDisable(secret, publicKey,cb)
+  - forgingStatus(publicKey, cb)
+  - forgingEnableAll(*, cb)
+  - forgingDisableAll(*, cb)
+  .. shared ..
+  + getDelegate(publicKey, username, cb)
+  + getNextForgers(limit, cb)
+  + search(orderBy, q, limit, cb)
+  + count(*, cb)
+  + getVoters(publicKey, cb)
+  + getDelegates(schema, cb)
+  + getFee(*, cb)
+  + getForgedByAccount(start, end, generatorPublicKey, cb)
+  + addDelegate(secret, publicKey, cb)
+}
+@enduml

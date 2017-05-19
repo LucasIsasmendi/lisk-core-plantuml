@@ -1,0 +1,11 @@
+@startuml
+class Crypto < module > {
+  - __private: {}
+  - self: this
+  --
+  + Crypto (cb, scope)
+  + sandboxApi (call, args, cb)
+  + onBind (scope)
+  + onBlockchainReady ()
+}
+@enduml

@@ -1,0 +1,30 @@
+@startuml
+class Process < modules > {
+  - self
+  - __private: {}
+  .. library ..
+  - logger
+  - logic.peers
+  - logic.transaction
+  - logic.block
+  - schema
+  - db
+  - dbSequence
+  - sequence
+  - genesisblock
+  .. modules ..
+  - accounts
+  - blocks
+  - delegates
+  - loader
+  - rounds
+  - transactions
+  - transport
+  -- Methods --
+  + Process (logger, block, peers,
+  transaction, schema, db,
+  dbSequence, sequence, genesisblock)
+  ~ PENDING
+  + onBind (scope)
+}
+@enduml

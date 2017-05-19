@@ -1,0 +1,11 @@
+@startuml
+class Name < logic > {
+  - private var
+  .. library object ..
+  - content1
+  .. modules object ..
+  - content2
+  -- Methods --
+  + Public ()
+  - Private ()
+}

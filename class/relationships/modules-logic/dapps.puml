@@ -1,0 +1,18 @@
+@startuml
+!include ../../classes/modules/dapps.puml
+!include ../../classes/logic/dapp.puml
+!include ../../classes/logic/inTransfer.puml
+!include ../../classes/logic/outTransfer.puml
+!include transactions.puml
+!include accounts.puml
+!include peers.puml
+!include sql.puml
+
+DApps ^-- DApp: new
+DApps ^-- InTransfer: new
+DApps ^-- OutTransfer: new
+DApps ^.. Transactions: implements
+DApps ^.. Peers: implements
+DApps ^.. Sql: implements
+DApps ^.. Accounts: implements
+@enduml

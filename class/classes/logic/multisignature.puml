@@ -1,0 +1,36 @@
+@startuml
+class Multisignature < logic > {
+  - __private: {}
+  - modules
+  - library
+  + schema
+  + dbTable: multisignatures
+  + dbFields
+  .. library ..
+  - logger
+  - schema
+  - network
+  - logic.transaction
+  .. modules object ..
+  - rounds
+  - accounts
+  -- Methods --
+  + Multisignature (schema, network,
+  transaction, logger)
+  + bind (rounds, accounts)
+  + create (data, trs)
+  + calculateFee (trs, sender)
+  + verify (trs, sender, cb)
+  + process (trs, sender, cb)
+  + getBytes (trs, skip)
+  + apply (trs, block, sender, cb)
+  + undo (trs, block, sender, cb)
+  + applyUnconfirmed (trs, sender, cb)
+  + undoUnconfirmed (trs, sender, cb)
+  + objectNormalize (trs)
+  + dbRead (raw)
+  + dbSave (trs)
+  + afterSave (trs, cb)
+  + ready (trs, sender)
+}
+@endtuml

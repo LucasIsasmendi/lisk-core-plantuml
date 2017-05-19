@@ -1,0 +1,30 @@
+@startuml
+class Signature < logic > {
+  - modules
+  - library
+  + schema
+  + dbTable: 'signatures'
+  + dbFields
+  .. library ..
+  - schema
+  - logger
+  .. modules ..
+  - accounts
+  -- Methods --
+  + Signature (schema, logger)
+  + bind (accounts)
+  + create (data, trs)
+  + calculateFee (trs, sender)
+  + verify (trs, sender, cb)
+  + process (trs, sender, cb)
+  + getBytes (trs)
+  + apply (trs, block, sender, cb)
+  + undo (trs, block, sender, cb)
+  + applyUnconfirmed (trs, sender, cb)
+  + undoUnconfirmed (trs, sender, cb)
+  + objectNormalize (trs)
+  + dbRead (raw)
+  + dbSave (trs)
+  + ready (trs, sender)
+}
+@endtuml

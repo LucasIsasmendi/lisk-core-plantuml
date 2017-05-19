@@ -1,0 +1,32 @@
+@startuml
+class OutTransfer < logic > {
+  - __private: {}
+  - library
+  - modules
+  .. library..
+  - db
+  - schema
+  - logger
+  .. modules ..
+  - accounts
+  - rounds
+  - dapps
+  -- Methods --
+  + OutTransfer (db, schema, logger)
+  + bind (accounts, rounds, dapps)
+  + create (data, trs)
+  + calculateFee (trs, sender)
+  + verify (trs, sender, cb)
+  + process (trs, sender, cb)
+  + getBytes (trs)
+  + apply (trs, block, sender, cb)
+  + undo (trs, block, sender, cb)
+  + applyUnconfirmed (trs, sender, cb)
+  + undoUnconfirmed (trs, sender, cb)
+  + objectNormalize (trs)
+  + dbRead (raw)
+  + dbSave (trs)
+  + afterSave (trs, cb)
+  + ready (trs, sender)
+}
+@endtuml

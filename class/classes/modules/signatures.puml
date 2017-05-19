@@ -1,0 +1,26 @@
+@startuml
+class Signatures < modules > {
+  - assetTypes[1]: new Signature()
+  - __private: {}
+  - self: this
+  .. library ..
+  - schema
+  - ed
+  - balancesSequence
+  - logic.transaction
+  .. modules ..
+  - accounts
+  - transactions
+  -- Methods --
+  + Signatures (cb, scope)
+  + isLoaded ()
+  + sandboxApi (call, args, cb)
+  + onBind (scope)
+  -- API --
+  .. shared ..
+  + getFee (*, cb)
+  + addSignature (secret, publicKey,
+  multisigAccountPublicKey,
+  secondSecret, cb)
+}
+@enduml

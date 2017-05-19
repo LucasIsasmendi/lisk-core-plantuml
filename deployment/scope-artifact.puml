@@ -1,0 +1,21 @@
+@startuml
+artifact scope
+artifact modules
+artifact api
+artifact artifact4
+artifact artifact5
+artifact artifact6
+artifact artifact7
+artifact artifact8
+artifact artifact9
+artifact artifact10
+scope --> modules
+scope --* api
+scope --o artifact4
+scope --+ artifact5
+scope --# artifact6
+scope -->> artifact7
+scope --0 artifact8
+scope --^ artifact9
+scope --(0 artifact10
+@enduml

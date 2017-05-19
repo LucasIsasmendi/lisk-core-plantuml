@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="227px" preserveAspectRatio="none" style="width:191px;height:227px;" version="1.1" viewBox="0 0 191 227" width="191px" zoomAndPan="magnify"><defs><linearGradient id="g1f28dmewzudf20" x1="0%" x2="100%" y1="50%" y2="50%"><stop offset="0%" stop-color="#F0F8FF"/><stop offset="100%" stop-color="#ADD8E6"/></linearGradient><filter height="300%" id="f1f28dmewzudf2" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--class Peer--><rect fill="url(#g1f28dmewzudf20)" filter="url(#f1f28dmewzudf2)" height="210.4609" id="Peer" style="stroke: #00008B; stroke-width: 1.5;" width="176" x="6" y="8"/><ellipse cx="54.75" cy="24" fill="#ADD1B2" rx="11" ry="11" style="stroke: #00008B; stroke-width: 1.0;"/><path d="M57.7188,29.6406 Q57.1406,29.9375 56.5,30.0859 Q55.8594,30.2344 55.1563,30.2344 Q52.6563,30.2344 51.3359,28.5859 Q50.0156,26.9375 50.0156,23.8125 Q50.0156,20.6875 51.3359,19.0313 Q52.6563,17.375 55.1563,17.375 Q55.8594,17.375 56.5078,17.5313 Q57.1563,17.6875 57.7188,17.9844 L57.7188,20.7031 Q57.0938,20.125 56.5,19.8516 Q55.9063,19.5781 55.2813,19.5781 Q53.9375,19.5781 53.25,20.6484 Q52.5625,21.7188 52.5625,23.8125 Q52.5625,25.9063 53.25,26.9766 Q53.9375,28.0469 55.2813,28.0469 Q55.9063,28.0469 56.5,27.7734 Q57.0938,27.5 57.7188,26.9219 L57.7188,29.6406 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="29" x="75.25" y="28.1543">Peer</text><rect fill="#FFFFFF" height="15.9688" style="stroke: #000000; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" width="39" x="146" y="5"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="29" x="151" y="17.1387">logic</text><line style="stroke: #00008B; stroke-width: 1.5;" x1="7" x2="181" y1="40" y2="40"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="14" y="48.9023"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="21" x="26" y="54.2104">this</text><ellipse cx="17" cy="64.707" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="59" x="26" y="67.0151">properties</text><ellipse cx="17" cy="77.5117" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="60" x="26" y="79.8198">immutable</text><ellipse cx="17" cy="90.3164" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="47" x="26" y="92.6245">headers</text><ellipse cx="17" cy="103.1211" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="44" x="26" y="105.4292">nullable</text><ellipse cx="17" cy="132.7305" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="64" x="26" y="135.0386">Peer (peer)</text><ellipse cx="17" cy="145.5352" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="75" x="26" y="147.8433">accept (peer)</text><ellipse cx="17" cy="158.3398" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="93" x="26" y="160.6479">normalize (peer)</text><ellipse cx="17" cy="171.1445" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="150" x="26" y="173.4526">parseInt (integer, fallback)</text><ellipse cx="17" cy="183.9492" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="137" x="26" y="186.2573">applyHeaders (headers)</text><ellipse cx="17" cy="196.7539" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="77" x="26" y="199.062">update (peer)</text><ellipse cx="17" cy="209.5586" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="46" x="26" y="211.8667">object ()</text><line style="stroke: #00008B; stroke-width: 1.0;" x1="7" x2="70" y1="118.4258" y2="118.4258"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="48" x="70" y="121.7339">Methods</text><line style="stroke: #00008B; stroke-width: 1.0;" x1="118" x2="181" y1="118.4258" y2="118.4258"/><!--
+@startuml
+skinparam class {
+	BackgroundColor AliceBlue|LightBlue
+	ArrowColor Black
+	BorderColor DarkBlue
+}
+class Peer < logic > {
+  - this
+  + properties
+  + immutable
+  + headers
+  + nullable
+  - - Methods - -
+  + Peer (peer)
+  + accept (peer)
+  + normalize (peer)
+  + parseInt (integer, fallback)
+  + applyHeaders (headers)
+  + update (peer)
+  + object ()
+}
+@endtuml
+
+PlantUML version 1.2017.12(Wed Apr 26 13:06:36 ART 2017)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_131-b11
+Operating System: Linux
+OS Version: 3.13.0-119-generic
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

@@ -1,0 +1,22 @@
+@startuml
+class Broadcaster < logic > {
+  - __private: {}
+  - self
+  .. library ..
+  - logger
+  - logic.peers
+  - logic.transaction
+  - config.broadcasts
+  - config.forging.force
+  .. modules ..
+  - peers
+  - transport
+  - transactions
+  -- Methods --
+  + Broadcaster (broadcasts, force,
+  peers, transaction, logger)
+  + bind (peers, transport, transactions)
+  ~ PENDING
+
+}
+@endtuml

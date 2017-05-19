@@ -1,0 +1,26 @@
+@startuml
+class Round < logic > {
+  - this.scope: scope
+	- this.t: t
+  .. scope ..
+  - modules: accounts
+  - __private
+  - block
+  - round
+  - backwards
+  - delegates
+  - finishRound
+  - snapshotRound
+  -- Methods --
+  + Round (scope, t)
+  + mergeBlockGenerator ()
+  + updateMissedBlocks ()
+  + getVotes ()
+  + updateVotes ()
+  + markBlockId ()
+  + flushRound ()
+  + truncateBlocks ()
+  + applyRound ()
+  + land ()
+}
+@endtuml

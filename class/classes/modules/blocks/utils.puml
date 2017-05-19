@@ -1,0 +1,20 @@
+@startuml
+class Utils < modules > {
+  - self
+  - __private: {}
+  .. library ..
+  - logger
+  - logic.block
+  - logic.transaction
+  - db
+  - dbSequence
+  - genesisblock
+  .. modules ..
+  - blocks
+  -- Methods --
+  + Utils (logger, block, transaction,
+  db, dbSequence, genesisblock)
+  ~ PENDING
+  + onBind (scope)
+}
+@enduml

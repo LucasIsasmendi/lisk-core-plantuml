@@ -1,0 +1,8 @@
+@startuml
+!include ../../classes/modules/delegates.puml
+!include ../../classes/logic/delegate.puml
+!include ../../classes/logic/blockReward.puml
+
+Delegates ^-- Delegate: new
+Delegates ^-- BlockReward: new
+@enduml

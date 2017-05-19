@@ -1,0 +1,8 @@
+@startuml
+!include ../../classes/modules/multisignatures.puml
+!include ../../classes/logic/multisignature.puml
+!include ../../classes/logic/transaction.puml
+
+Multisignatures ^-- Multisignature: new
+Multisignatures ^.. Transaction: implements
+@enduml

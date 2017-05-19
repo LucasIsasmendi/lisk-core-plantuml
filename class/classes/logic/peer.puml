@@ -1,0 +1,17 @@
+@startuml
+class Peer < logic > {
+  - this
+  + properties
+  + immutable
+  + headers
+  + nullable
+  -- Methods --
+  + Peer (peer)
+  + accept (peer)
+  + normalize (peer)
+  + parseInt (integer, fallback)
+  + applyHeaders (headers)
+  + update (peer)
+  + object ()
+}
+@endtuml

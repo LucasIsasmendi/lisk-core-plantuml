@@ -1,0 +1,32 @@
+@startuml
+class Vote < logic > {
+  - self: this
+  - library
+  - modules
+  .. library ..
+  - logger
+  - schema
+  .. modules ..
+  - delegates
+  - rounds
+  --
+  + Vote (logger, schema)
+  + bind(delegates, rounds)
+  + create(data, trs)
+  + calculateFee(trs, sender)
+  + verify(trs, sender, cb)
+  + verifyVote(vote, cb)
+  + checkConfirmedDelegates(trs, cb)
+  + checkUnconfirmedDelegates(trs, cb)
+  + process(trs, sender, cb)
+  + getBytes(trs)
+  + apply(trs, block, sender, cb)
+  + undo(trs, block, sender, cb)
+  + applyUnconfirmed(trs, sender, cb)
+  + undoUnconfirmed(trs, sender, cb)
+  + objectNormalize(trs)
+  + dbRead(raw)
+  + dbSave(trs)
+  + ready(trs, sender)
+}
+@endtuml

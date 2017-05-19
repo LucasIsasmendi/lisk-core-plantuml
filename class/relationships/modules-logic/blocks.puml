@@ -1,0 +1,15 @@
+@startuml
+!include ../../classes/modules/blocks.puml
+!include ../../classes/logic/blockReward.puml
+!include ../../classes/logic/block.puml
+!include ../../classes/logic/transaction.puml
+!include ../../classes/logic/peers.puml
+!include ../../classes/logic/peer.puml
+
+Blocks ^-- BlockReward : new
+Blocks ^.. Block: implements
+Blocks ^.. Transaction: implements
+Blocks ^.. Peers: implements
+Block  ^-- BlockReward : new
+Peers ^-- Peer : new
+@enduml

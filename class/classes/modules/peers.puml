@@ -1,0 +1,47 @@
+@startuml
+class Peers < module > {
+  - __private: {}
+  - self: this
+  .. library object ..
+  - logger
+  - db
+  - schema
+  - bus
+  - nonce
+  - build
+  - lastCommit
+  - logic.peers
+  - config.peers
+  - config.version
+  .. modules ..
+  - transport
+  - system
+  -- Methods --
+  + Peers (cb, scope)
+  - countByFilter (filter, cb)
+  - getByFilter (filter, cb)
+  - removeBans (cb)
+  - insertSeeds (cb)
+  - dbLoad (cb)
+  - dbSave (cb)
+  + sandboxApi (call, args, cb)
+  + update (peer)
+  + remove (pip, port)
+  + ban (pip, port, seconds)
+  + ping (peer, cb)
+  + discover (cb)
+  + acceptable (peers)
+  + list (options, cb)
+  + onBind (scope)
+  + onBlockchainReady ()
+  + onPeersReady ()
+  + cleanup ()
+  + isLoaded ()
+  -- API --
+  .. shared ..
+  + count (*, cb)
+  + getPeers (filter, cb)
+  + getPeer (ip, port, cb)
+  + version (*, cb)
+}
+@enduml

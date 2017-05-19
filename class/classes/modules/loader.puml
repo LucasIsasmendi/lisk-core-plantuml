@@ -1,0 +1,53 @@
+@startuml
+class Loader < module > {
+  - __private: {}
+  - self: this
+  .. library..
+  - logger
+  - db
+  - network
+  - schema
+  - sequence
+  - bus
+  - genesisblock
+  - balancesSequence
+  - logic.transaction
+  - logic.account
+  - logic.peers
+  - config.loading.verifyOnLoading
+  - config.loading.snapshot
+  .. modules..
+  - transactions
+  - blocks
+  - peers
+  - rounds
+  - transport
+  - multisignatures
+  - system
+  -- Methods --
+  + Loader(cb, scope)
+  - initialize()
+  - syncTrigger(turnOn)
+  - syncTimer()
+  - loadSignatures(cb)
+  - loadTransactions(cb)
+  - loadBlockChain()
+  - loadBlocksFromNetwork(cb)
+  - sync(cb)
+  - findGoodPeers(heights)
+  + getNetwork(cb)
+  + syncing()
+  + sandboxApi(call, args, cb)
+  + isLoaded()
+  + onPeersReady()
+  + onBind(scope)
+  + onBlockchainReady()
+  + cleanup(cb)
+  -- API --
+  .. internal ..
+  - statusPing()
+  .. shared ..
+  + status(*, cb)
+  + sync(*, cb)
+}
+@enduml

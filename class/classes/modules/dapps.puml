@@ -1,0 +1,54 @@
+@startuml
+class DApps < modules > {
+  - assetTypes[5]: new DApp(db, logger, schema, network)
+  - assetTypes[6]: new InTransfer(db, schema)
+  - assetTypes[7]: new OutTransfer(db, schema, logger)
+  - __private: {}
+  - self: this
+  - internal: {API}
+  + shared: {API}
+  .. library ..
+  - logic.transaction
+  - logger
+  - db
+  - public
+  - network
+  - schema
+  - config.dapp
+  - ed
+  - balancesSequence
+  .. modules ..
+  - transactions
+  - accounts
+  - peers
+  - sql
+  -- Methods --
+  + DApps(cb, scope)
+  - get(id, cb)
+  - getByIds(ids, cb)
+  - list(filter, cb)
+  - createBasePaths(cb)
+  - installDependencies(dapp, cb)
+  - getInstalledIds(cb)
+  - removeDApp(dapp, cb)
+  - downloadLink(dapp, dappPath, cb)
+  - installDApp(dapp, cb)
+  - createSymlink(dapp, cb)
+  - apiHandler(message, callback)
+  - createRoutes(dapp, cb)
+  - launchDApp(body, cb)
+  - createSandbox(dapp, params, cb)
+  - stopDApp(dapp, cb)
+  + sandboxApi(call, args, cb)
+  + message(dappid, body, cb)
+  + request(dappid, method, path, query, cb)
+  + onBind (scope)
+  + onBlockchainReady()
+  + onDeleteBlocksBefore(block)
+  + onNewBlock(block, broadcast)
+  + isLoaded()
+  -- API --
+  .. internal ..
+  .. shared ..
+}
+@enduml

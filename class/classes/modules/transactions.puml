@@ -1,0 +1,62 @@
+@startuml
+class Transactions < module > {
+  - genesisblock
+  - self: this
+  .. __private ..
+  - assetTypes[0]: new Transfer()
+  - transactionPool: new TransactionPool (broadcastInterval,
+  releaseLimit, transaction, bus, logger)
+  .. library ..
+  - logger
+  - db
+  - schema
+  - ed
+  - balancesSequence
+  - logic.transaction
+  .. modules ..
+  - accounts
+  - transactions
+  -- Methods --
+  + Transactions (cb, genesisblock, scope)
+  - list (filter, cb)
+  - getById (id, cb)
+  - getVotesById (transaction, cb)
+  - getPooledTransaction (method, req, cb)
+  + getPooledTransactions (method, req, cb)
+  + transactionInPool (id)
+  + getUnconfirmedTransaction (id)
+  + getQueuedTransaction (id)
+  + getMultisignatureTransaction (id)
+  + getUnconfirmedTransactionList (reverse, limit)
+  + getQueuedTransactionList (reverse, limit)
+  + getMultisignatureTransactionList (reverse, limit)
+  + getMergedTransactionList (reverse, limit)
+  + removeUnconfirmedTransaction (id)
+  + processUnconfirmedTransaction (transaction, broadcast, cb)
+  + applyUnconfirmedList (cb)
+  + applyUnconfirmedIds (ids, cb)
+  + undoUnconfirmedList (cb)
+  + apply (transaction, block, sender, cb)
+  + undo (transaction, block, sender, cb)
+  + applyUnconfirmed (transaction, sender, cb)
+  + undoUnconfirmed (transaction, cb)
+  + receiveTransactions (transactions, broadcast, cb)
+  + fillPool (cb)
+  + sandboxApi (call, args, cb)
+  + isLoaded ()
+  + onBind (scope)
+  -- API --
+  .. shared ..
+  + getTransactions (req, cb)
+  + getTransaction (id, cb)
+  + getTransactionsCount (*, cb)
+  + getQueuedTransaction (id, cb)
+  + getQueuedTransactions (senderPublicKey, address, cb)
+  + getMultisignatureTransaction (id, cb)
+  + getMultisignatureTransactions (senderPublicKey, address,cb)
+  + getUnconfirmedTransaction (id, cb)
+  + getUnconfirmedTransactions (senderPublicKey, address, cb)
+  + addTransactions (secret, publicKey, recipientId,
+  multisigAccountPublicKey, secondSecret, amount, cb)
+}
+@enduml

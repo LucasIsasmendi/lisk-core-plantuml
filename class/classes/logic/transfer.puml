@@ -1,0 +1,11 @@
+@startuml
+class Transfer < logic > {
+  .. modules ..
+  - accounts
+  - rounds
+  -- Methods --
+  + Transfer ()
+  + bind (accounts, rounds)
+  ~ PENDING
+}
+@endtuml

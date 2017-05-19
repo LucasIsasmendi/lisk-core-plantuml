@@ -1,0 +1,31 @@
+@startuml
+class Name < modules > {
+  - private var
+  + public var
+  .. object ..
+  - content1
+  .. object ..
+  - content2
+  -- Methods --
+  - method_Private()
+  + method_Public()
+  -- API --
+  .. internal ..
+  - api_Private()
+  .. shared ..
+  + api_Public()
+}
+
+@startuml
+class Multisignatures < module > {
+  - genesisblock
+  - assetTypes[4]: new Multisignature()
+  - __private: {}
+  - self: this
+  .. library object..
+  .. modules object ..
+  -- Methods --
+  + Multisignatures (cb, scope)
+  -- API --
+  .. shared ..
+}

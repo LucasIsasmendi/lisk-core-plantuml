@@ -1,0 +1,32 @@
+@startuml
+class Transaction < logic > {
+  - __private: {}
+  - self: this
+  .. self ..
+  - unconfirmed: {transactions:[], index:{}}
+  - bundled: {transactions:[], index:{}}
+  - queued: {transactions:[], index:{}}
+  - multisignature: {transactions:[], index:{}}
+  - expiryInterval: 30000
+  - bundledInterval: broadcastInterval
+  - bundleLimit: releaseLimit
+  - processed: 0
+  - processBundled: timmer
+  - expireTransactions: timmer
+  .. library ..
+  - logger
+  - bus
+  - logic.transaction
+  - config.broadcasts.broadcastInterval
+  - config.broadcasts.releaseLimit
+  .. modules ..
+  - accounts
+  - transactions
+  - loader
+  -- Methods --
+  + TransactionPool (broadcastInterval,
+  releaseLimit, transaction, bus, logger)
+  + bind (accounts, transactions, loader)
+  ~ PENDING
+}
+@endtuml

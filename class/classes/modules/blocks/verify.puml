@@ -1,0 +1,20 @@
+@startuml
+class Verify < modules > {
+  - self
+  - __private: {}
+  .. library ..
+  - logger
+  - logic.block
+  - logic.transaction
+  - db
+  .. modules ..
+  - accounts
+  - blocks
+  - delegates
+  - transactions
+  -- Methods --
+  + Verify (logger, block, transaction, db)
+  ~ PENDING
+  + onBind (scope)
+}
+@enduml

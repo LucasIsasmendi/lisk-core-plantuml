@@ -1,0 +1,34 @@
+@startuml
+class Multisignatures < module > {
+  - genesisblock
+  - assetTypes[4]: new Multisignature(schema,
+  network, transaction, logger)
+  - __private: {}
+  - self: this
+  .. library ..
+  - logger
+  - db
+  - network
+  - schema
+  - ed
+  - bus
+  - balancesSequence
+  - logic.transaction
+  .. modules ..
+  - transactions
+  - accounts
+  -- Methods --
+  + Multisignatures (cb, scope)
+  + processSignature (tx, cb)
+  + sandboxApi (call, args, cb)
+  + onBind (scope)
+  + isLoaded ()
+  -- API --
+  .. shared ..
+  + getAccounts (publicKey, cb)
+  + pending (publicKey, cb)
+  + sign (transactionId, secret, publicKey, cb)
+  + addMultisignature (secret, publicKey,
+  secondSecret, min, keysgroup, lifetime, cb)
+}
+@enduml

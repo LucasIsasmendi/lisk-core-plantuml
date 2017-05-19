@@ -1,0 +1,49 @@
+@startuml
+
+node scope
+node logger
+node logic
+node schema
+node network
+node ed
+node config
+node modules
+node bus
+node balancesSequence
+node genesisblock
+node sequence
+node nonce
+node dbSequence
+node public
+node build
+node lastCommit
+node api
+node connect
+node ready
+node listen
+scope == logger
+scope == logic
+scope == schema
+scope -- network
+scope -- ed
+scope -- config
+scope -- modules
+scope .. bus
+scope .. balancesSequence
+scope .. genesisblock
+scope .. sequence
+scope .. nonce
+scope ~~ dbSequence
+scope ~~ public
+scope ~~ build
+scope ~~ lastCommit
+scope ~~ api
+scope ~~ connect
+scope ~~ ready
+scope ~~ listen
+logic .. bus
+logic -- ed
+logic .. genesisblock
+logic == logger
+logic == schema
+@enduml

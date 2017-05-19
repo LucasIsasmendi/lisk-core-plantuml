@@ -1,0 +1,23 @@
+!include peer.puml
+@startuml
+class Peers_ < logic > {
+  - __private: {}
+  - self: this
+  .. library object ..
+  - logger
+  -- Methods --
+  + Peers (logger, cb)
+  + create (peer)
+  + exists (peer)
+  + get (peer)
+  + upsert (peer, insertOnly)
+  + ban (ip, port, seconds)
+  + unban (peer)
+  + remove (peer)
+  + list (normalize)
+  + bind (scope)
+}
+
+Peers_ ^-- Peer: new
+
+@endtuml

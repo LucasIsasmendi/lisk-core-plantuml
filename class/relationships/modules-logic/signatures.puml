@@ -1,0 +1,6 @@
+@startuml
+!include ../../classes/modules/signatures.puml
+!include ../../classes/logic/signature.puml
+
+Signatures ^-- Signature : new
+@enduml

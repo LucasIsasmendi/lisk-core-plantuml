@@ -1,0 +1,12 @@
+@startuml
+!include ../../classes/modules/accounts.puml
+!include ../../classes/logic/account.puml
+!include ../../classes/logic/transaction.puml
+!include ../../classes/logic/vote.puml
+!include ../../classes/logic/blockReward.puml
+
+Accounts ^-- Vote : new
+Accounts ^-- BlockReward : new
+Accounts ^.. Account: implements
+Accounts ^.. Transaction: implements
+@enduml
