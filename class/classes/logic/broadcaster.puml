@@ -2,6 +2,11 @@
 class Broadcaster < logic > {
   - __private: {}
   - self
+  .. self ..
+  + config
+  + consensus
+  + queue
+  + routes
   .. library ..
   - logger
   - logic.peers
@@ -16,7 +21,14 @@ class Broadcaster < logic > {
   + Broadcaster (broadcasts, force,
   peers, transaction, logger)
   + bind (peers, transport, transactions)
-  ~ PENDING
-
+  + getPeers (params, cb)
+  + enqueue (params, options)
+  + broadcast (params, options, cb)
+  + maxRelays (object)
+  .. __private ..
+  - filterQueue (cb)
+  - filterTransaction (transaction, cb)
+  - squashQueue (broadcasts)
+  - releaseQueue (cb)
 }
 @endtuml

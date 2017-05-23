@@ -9,6 +9,10 @@ class Vote < logic > {
   .. modules ..
   - delegates
   - rounds
+  .. prototype ..
+  + schema: Vote
+  + dbTable: votes
+  + dbFields
   --
   + Vote (logger, schema)
   + bind(delegates, rounds)

@@ -6,6 +6,10 @@ class Delegate < logic > {
   - schema
   .. modules ..
   - accounts
+  .. prototype ..
+  + schema
+  + dbTable: delegates
+  + dbFields
   -- Methods --
   + Delegate (schema)
   + bind (accounts)

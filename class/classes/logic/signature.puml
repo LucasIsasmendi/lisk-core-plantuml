@@ -10,6 +10,10 @@ class Signature < logic > {
   - logger
   .. modules ..
   - accounts
+  .. prototype ..
+  + schema: Signature
+  + dbTable: signatures
+  + dbFields
   -- Methods --
   + Signature (schema, logger)
   + bind (accounts)

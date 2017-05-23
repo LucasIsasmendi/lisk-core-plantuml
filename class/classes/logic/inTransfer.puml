@@ -11,6 +11,10 @@ class InTransfer < logic > {
   - rounds
   .. shared ..
   - getGenesis
+  .. prototype ..
+  + schema
+  + dbTable: intransfer
+  + dbFields
   -- Methods --
   + InTransfer (db, schema)
   + bind (accounts, rounds, shared)

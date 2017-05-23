@@ -3,9 +3,6 @@ class Transaction < logic > {
   - __private: {}
   - self: this
   - modules
-  + dbTable: trs
-  + dbFields
-  + schema: Transaction
   .. this.scope ..
   - db
   - ed
@@ -13,8 +10,12 @@ class Transaction < logic > {
   - genesisblock
   - account
   - logger
-  .. modules object ..
+  .. modules ..
   - rounds
+  .. prototype ..
+  + dbTable: trs
+  + schema: Transaction
+  + dbFields
   -- Methods --
   + Transaction (db, ed, schema, genesisblock, account,
   logger, cb)
@@ -42,6 +43,6 @@ class Transaction < logic > {
   + afterSave (trs, cb)
   + objectNormalize (trs)
   + dbRead (raw)
-  + bindModules (scope)
+  + bindModules (rounds)
 }
 @endtuml

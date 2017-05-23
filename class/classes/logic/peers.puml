@@ -3,7 +3,7 @@
 class Peers_ < logic > {
   - __private: {}
   - self: this
-  .. library object ..
+  .. library ..
   - logger
   -- Methods --
   + Peers (logger, cb)

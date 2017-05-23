@@ -1,6 +1,6 @@
 @startuml
 class Peer < logic > {
-  - this
+  .. prototype ..
   + properties
   + immutable
   + headers

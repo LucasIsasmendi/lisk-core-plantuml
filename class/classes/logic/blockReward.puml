@@ -1,15 +1,16 @@
 @startuml
 class BlockReward < logic > {
   - __private: {}
+  .. this ..
   + milestones
   + distance
   + rewardOffset
   -- Methods --
   + BlockReward ()
-  + calcMilestone(height)
-  + calcReward(height)
-  + calcSupply(height)
+  + calcMilestone (height)
+  + calcReward (height)
+  + calcSupply (height)
   .. __private ..
-  - parseHeight(height)
+  - parseHeight (height)
 }
 @endtuml

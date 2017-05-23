@@ -11,6 +11,10 @@ class OutTransfer < logic > {
   - accounts
   - rounds
   - dapps
+  .. prototype ..
+  + schema
+  + dbTable: outtransfer
+  + dbFields
   -- Methods --
   + OutTransfer (db, schema, logger)
   + bind (accounts, rounds, dapps)

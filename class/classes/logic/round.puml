@@ -1,16 +1,18 @@
 @startuml
 class Round < logic > {
-  - this.scope: scope
-	- this.t: t
+  ..this..
+  - scope: {}
+  - t: t
   .. scope ..
-  - modules: accounts
-  - __private
-  - block
-  - round
   - backwards
-  - delegates
-  - finishRound
-  - snapshotRound
+  - round
+  - roundOutsiders
+  - roundDelegates
+  - library.logger
+  - modules.accounts
+  - block.generatorPublicKey
+  - block.id
+  - block.height
   -- Methods --
   + Round (scope, t)
   + mergeBlockGenerator ()

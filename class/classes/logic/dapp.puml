@@ -2,13 +2,18 @@
 class DApp < logic > {
   - __private: {}
   - library
-  .. library object ..
+  .. library ..
   - db
   - logger
   - schema
   - network
+  .. prototype ..
+  + schema
+  + dbTable: dapps
+  + dbFields
   -- Methods --
   + DApp (db, logger, schema, network)
+  + bind ()
   + create (data, trs)
   + calculateFee (trs, sender)
   + verify (trs, sender, cb)

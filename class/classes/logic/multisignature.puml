@@ -3,9 +3,6 @@ class Multisignature < logic > {
   - __private: {}
   - modules
   - library
-  + schema
-  + dbTable: multisignatures
-  + dbFields
   .. library ..
   - logger
   - schema
@@ -14,6 +11,10 @@ class Multisignature < logic > {
   .. modules object ..
   - rounds
   - accounts
+  .. prototype ..
+  + schema
+  + dbTable: multisignatures
+  + dbFields
   -- Methods --
   + Multisignature (schema, network,
   transaction, logger)
