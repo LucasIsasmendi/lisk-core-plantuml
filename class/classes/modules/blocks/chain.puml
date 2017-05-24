@@ -3,13 +3,13 @@ class Chain < modules > {
   - self
   - __private: {}
   .. library ..
-  - logic.block
-  - logic.transaction
+  - logger
   - db
   - genesisblock
-  - logger
   - bus
   - balancesSequence
+  - logic.block
+  - logic.transaction
   .. modules ..
   - accounts
   - blocks
@@ -18,7 +18,20 @@ class Chain < modules > {
   -- Methods --
   + Chain (logger, block, transaction, db,
   genesisblock, bus, balancesSequence)
-  ~ PENDING
+  + saveGenesisBlock (cb)
+  + saveBlock (block, cb)
+  + afterSave (block, cb)
+  + deleteBlock (blockId, cb)
+  + deleteAfterBlock (blockId, cb)
+  + applyGenesisBlock (block, cb)
+  + applyBlock (block, broadcast, cb, saveBlock)
+  + deleteLastBlock (cb)
+  + recoverChain (cb)
   + onBind (scope)
+  .. __private ..
+  - promiseTransactions (t, block, blockPromises)
+  - applyTransaction (block, transaction, sender, cb)
+  - popLastBlock (oldLastBlock, cb)
+
 }
 @enduml

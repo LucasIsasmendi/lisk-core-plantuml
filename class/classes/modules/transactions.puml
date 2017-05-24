@@ -1,6 +1,5 @@
 @startuml
 class Transactions < module > {
-  - genesisblock
   - self: this
   .. __private ..
   - assetTypes[0]: new Transfer()
@@ -18,11 +17,6 @@ class Transactions < module > {
   - transactions
   -- Methods --
   + Transactions (cb, genesisblock, scope)
-  - list (filter, cb)
-  - getById (id, cb)
-  - getVotesById (transaction, cb)
-  - getPooledTransaction (method, req, cb)
-  + getPooledTransactions (method, req, cb)
   + transactionInPool (id)
   + getUnconfirmedTransaction (id)
   + getQueuedTransaction (id)
@@ -45,6 +39,12 @@ class Transactions < module > {
   + sandboxApi (call, args, cb)
   + isLoaded ()
   + onBind (scope)
+  .. __private ..
+  - list (filter, cb)
+  - getById (id, cb)
+  - getVotesById (transaction, cb)
+  - getPooledTransaction (method, req, cb)
+  - getPooledTransactions (method, req, cb)
   -- API --
   .. shared ..
   + getTransactions (req, cb)

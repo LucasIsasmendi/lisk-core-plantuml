@@ -26,6 +26,15 @@ class Loader < module > {
   - system
   -- Methods --
   + Loader(cb, scope)
+  + getNetwork(cb)
+  + syncing()
+  + sandboxApi(call, args, cb)
+  + isLoaded()
+  + onPeersReady()
+  + onBind(scope)
+  + onBlockchainReady()
+  + cleanup(cb)
+  .. __private ..
   - initialize()
   - syncTrigger(turnOn)
   - syncTimer()
@@ -35,19 +44,11 @@ class Loader < module > {
   - loadBlocksFromNetwork(cb)
   - sync(cb)
   - findGoodPeers(heights)
-  + getNetwork(cb)
-  + syncing()
-  + sandboxApi(call, args, cb)
-  + isLoaded()
-  + onPeersReady()
-  + onBind(scope)
-  + onBlockchainReady()
-  + cleanup(cb)
   -- API --
-  .. internal ..
-  - statusPing()
   .. shared ..
   + status(*, cb)
   + sync(*, cb)
+  .. internal ..
+  - statusPing()
 }
 @enduml

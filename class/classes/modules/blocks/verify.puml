@@ -4,9 +4,9 @@ class Verify < modules > {
   - __private: {}
   .. library ..
   - logger
+  - db
   - logic.block
   - logic.transaction
-  - db
   .. modules ..
   - accounts
   - blocks
@@ -14,7 +14,11 @@ class Verify < modules > {
   - transactions
   -- Methods --
   + Verify (logger, block, transaction, db)
-  ~ PENDING
+  + verifyBlock (block)
+  + processBlock (block, broadcast,
+  cb, saveBlock)
   + onBind (scope)
+  .. __private ..
+  - checkTransaction (block, transaction, cb)
 }
 @enduml

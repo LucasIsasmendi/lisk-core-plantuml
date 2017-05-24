@@ -3,6 +3,9 @@ class Transport < modules > {
   - shared: {}
   - __private: {}
   - self: this
+  .. __private ..
+  - broadcaster: new Broadcaster( broadcasts,
+  force, peers, transaction, logger)
   .. library ..
   - logger
   - db
@@ -23,10 +26,50 @@ class Transport < modules > {
   - system
   -- Methods --
   + Transport (cb, scope)
-  ~ PENDING
+  + headers (headers)
+  + consensus ()
+  + poorConsensus ()
+  + getPeers (params, cb)
+  + getFromRandomPeer (config, options, cb)
+  + getFromPeer (peer, options, cb)
+  + sandboxApi (call, args, cb)
+  + onBind (scope)
+  + onBlockchainReady ()
+  + onSignature (signature, broadcast)
+  + onUnconfirmedTransaction (transaction, broadcast)
+  + onNewBlock (block, broadcast)
+  + onMessage (msg, broadcast)
+  + cleanup (cb)
+  + isLoaded ()
+  .. __private ..
+  - hashsum (obj)
+  - banPeer (options, extraMessage)
+  - removePeer (options, extraMessage)
+  - receiveSignatures (query, cb)
+  - receiveSignature (signature, cb)
+  - receiveTransactions (query, peer,
+  extraLogMessage, cb)
+  - receiveTransaction (transaction,
+  peer, extraLogMessage, cb)
   -- API --
   .. shared ..
-  + api_Public()
-  ~ PENDING
+  + message (msg, cb)
+  + request (msg, cb)
+  .. internal ..
+  - blocksCommon (ids, peer, extraLogMessage, cb)
+  - blocks (lastBlockId, cb)
+  - postBlock (block, peer, extraLogMessage, cb)
+  - list (req, cb)
+  - height (req, cb)
+  - ping (req, cb)
+  - postSignatures (query, cb)
+  - getSignatures (req, cb)
+  - getTransactions (req, cb)
+  - postTransactions (query, peer, extraLogMessage, cb)
+  - postDappMessage (query, cb)
+  - postDappRequest (query, cb)
+  - handshake (ip, port, headers, validateHeaders, cb)
+
+
 }
 @enduml

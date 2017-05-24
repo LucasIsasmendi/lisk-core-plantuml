@@ -1,8 +1,9 @@
 @startuml
 class Signatures < modules > {
-  - assetTypes[1]: new Signature()
   - __private: {}
   - self: this
+  .. __private ..
+  - assetTypes[1]: new Signature(schema, logger)
   .. library ..
   - schema
   - ed

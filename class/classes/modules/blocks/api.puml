@@ -3,24 +3,33 @@ class API < modules > {
   - self
   - blockReward: new BlockReward()
   - __private: {}
-  + public var
   .. library ..
   - logger
   - db
-  - logic.block
   - schema
   - dbSequence
+  - logic.block
   .. modules ..
   - system
   - blocks
-  -
   -- Methods --
-  - method_Private()
-  + API (logger, db, block, schema, dbSequence)
-  -- API --
-  .. internal ..
-  - api_Private()
-  .. shared ..
-  + api_Public()
+  + API (logger, db, block, schema,
+  dbSequence)
+  + getBlock (id, cb)
+  + getBlocks (req, cb)
+  + getBroadhash (req, cb)
+  + getEpoch (req, cb)
+  + getHeight (req, cb)
+  + getFee (req, cb)
+  + getFees (req, cb)
+  + getNethash (req, cb)
+  + getMilestone (req, cb)
+  + getReward (req, cb)
+  + getSupply (req, cb)
+  + getStatus (req, cb)
+  + onBind (scope)
+  .. __private ..
+  - getById (id, cb)
+  - list (filter, cb)
 }
 @enduml

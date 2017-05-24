@@ -18,12 +18,6 @@ class Peers < module > {
   - system
   -- Methods --
   + Peers (cb, scope)
-  - countByFilter (filter, cb)
-  - getByFilter (filter, cb)
-  - removeBans (cb)
-  - insertSeeds (cb)
-  - dbLoad (cb)
-  - dbSave (cb)
   + sandboxApi (call, args, cb)
   + update (peer)
   + remove (pip, port)
@@ -37,6 +31,13 @@ class Peers < module > {
   + onPeersReady ()
   + cleanup ()
   + isLoaded ()
+  .. __private ..
+  - countByFilter (filter, cb)
+  - getByFilter (filter, cb)
+  - removeBans (cb)
+  - insertSeeds (cb)
+  - dbLoad (cb)
+  - dbSave (cb)
   -- API --
   .. shared ..
   + count (*, cb)

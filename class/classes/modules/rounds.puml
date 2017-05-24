@@ -26,6 +26,7 @@ class Rounds < module > {
   + onBlockchainReady ()
   + onFinishRound (round)
   + cleanup (cb)
+  .. __private ..
   - getOutsiders (scope, cb)
   - sumRound (round, cb)
 }

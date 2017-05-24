@@ -4,17 +4,24 @@ class Utils < modules > {
   - __private: {}
   .. library ..
   - logger
-  - logic.block
-  - logic.transaction
   - db
   - dbSequence
   - genesisblock
+  - logic.block
+  - logic.transaction
   .. modules ..
   - blocks
   -- Methods --
   + Utils (logger, block, transaction,
   db, dbSequence, genesisblock)
-  ~ PENDING
+  + readDbRows (rows)
+  + loadBlocksPart (filter, cb)
+  + loadLastBlock (cb)
+  + getIdSequence (height, cb)
+  + loadBlocksData (filter, options, cb)
+  + getBlockProgressLogger (transactionsCount,
+  logsFrequency, msg)
+  + aggregateBlocksReward (filter, cb)
   + onBind (scope)
 }
 @enduml

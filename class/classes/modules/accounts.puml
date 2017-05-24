@@ -17,7 +17,6 @@ class Accounts < modules > {
   - transactions
   --
   + Accounts(cb, scope)
-  - openAccount(secret, cb)
   + generateAddressByPublicKey(publicKey)
   + getAccount(filter, fields, cb)
   + getAccounts(filter, fields, cb)
@@ -26,10 +25,21 @@ class Accounts < modules > {
   + sandboxApi(call, args, cb)
   + onBind(scope)
   + isLoaded()
+  - openAccount(secret, cb)
   -- API --
-  .. internal ..
-  ~ Pending
   .. shared ..
-  ~ Pending
+  + open (secret, cb)
+  + getBalance (address, cb)
+  + getPublickey (address, cb)
+  + generatePublicKey (secret, cb)
+  + getDelegates (address, cb)
+  + getDelegatesFee (req, cb)
+  + addDelegates (secret, publicKey, multisigAccountPublicKey,
+  secondSecret, delegates, cb)
+  + getAccount (address, publicKey, cb)
+  .. internal ..
+  - count (req, cb)
+  - top (query, cb)
+  - getAllAccounts (req, cb)
 }
 @enduml

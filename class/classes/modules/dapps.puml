@@ -1,22 +1,23 @@
 @startuml
 class DApps < modules > {
+  - __private: {}
+  - self: this
+  - internal: {}
+  + shared: {}
+  .. __private ..
   - assetTypes[5]: new DApp(db, logger, schema, network)
   - assetTypes[6]: new InTransfer(db, schema)
   - assetTypes[7]: new OutTransfer(db, schema, logger)
-  - __private: {}
-  - self: this
-  - internal: {API}
-  + shared: {API}
   .. library ..
-  - logic.transaction
   - logger
   - db
   - public
   - network
   - schema
-  - config.dapp
   - ed
   - balancesSequence
+  - logic.transaction
+  - config.dapp
   .. modules ..
   - transactions
   - accounts
@@ -24,6 +25,15 @@ class DApps < modules > {
   - sql
   -- Methods --
   + DApps(cb, scope)
+  + sandboxApi(call, args, cb)
+  + message(dappid, body, cb)
+  + request(dappid, method, path, query, cb)
+  + onBind (scope)
+  + onBlockchainReady()
+  + onDeleteBlocksBefore(block)
+  + onNewBlock(block, broadcast)
+  + isLoaded()
+  .. __private ..
   - get(id, cb)
   - getByIds(ids, cb)
   - list(filter, cb)
@@ -39,16 +49,33 @@ class DApps < modules > {
   - launchDApp(body, cb)
   - createSandbox(dapp, params, cb)
   - stopDApp(dapp, cb)
-  + sandboxApi(call, args, cb)
-  + message(dappid, body, cb)
-  + request(dappid, method, path, query, cb)
-  + onBind (scope)
-  + onBlockchainReady()
-  + onDeleteBlocksBefore(block)
-  + onNewBlock(block, broadcast)
-  + isLoaded()
   -- API --
-  .. internal ..
   .. shared ..
+  + getGenesis (dappid, cb)
+  + setReady (dappid, cb)
+  + getCommonBlock (dappid, cb)
+  + sendWithdrawal (req, cb)
+  + getWithdrawalLastTransaction (dappid, cb)
+  + getBalanceTransactions (lastTransactionId, dappid, cb)
+  .. internal ..
+  - put (dapp, cb)
+  - get (query, cb)
+  - list (query, cb)
+  - installed (req, cb)
+  - search (query, cb)
+  - installedIds (req, cb)
+  - isMasterPasswordEnabled (req, cb)
+  - install (params, cb)
+  - uninstall (params, cb)
+  - launch (req, cb)
+  - installing (req, cb)
+  - uninstalling (req, cb)
+  - launched (req, cb)
+  - categories (req, cb)
+  - stop (params, cb)
+  - addTransactions (secret, publicKey, secondSecret,
+  multisigAccountPublicKey, amount, dappId, cb)
+  - sendWithdrawal (secret, multisigAccountPublicKey,
+  secondSecret, amount, recipientId, dappId, transactionId, cb)
 }
 @enduml

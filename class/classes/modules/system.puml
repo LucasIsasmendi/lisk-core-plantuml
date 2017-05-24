@@ -15,7 +15,18 @@ class Name < System > {
   - transport
   -- Methods --
   + System (cb, scope)
-  ~ PENDING
+  + headers ()
+  + getOS ()
+  + getVersion ()
+  + getPort ()
+  + getHeight ()
+  + getNethash ()
+  + networkCompatible (nethash)
+  + getMinVersion ()
+  + versionCompatible (version)
+  + getBroadhash (cb)
+  + update (cb)
+  + sandboxApi (call, args, cb)
   + onBind (scope)
 }
 @enduml

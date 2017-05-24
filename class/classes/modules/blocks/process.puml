@@ -24,7 +24,13 @@ class Process < modules > {
   + Process (logger, block, peers,
   transaction, schema, db,
   dbSequence, sequence, genesisblock)
-  ~ PENDING
+  + getCommonBlock (peer, height, cb)
+  + loadBlocksOffset (limit, offset, verify, cb)
+  + loadBlocksFromPeer (peer, cb)
+  + generateBlock (keypair, timestamp, cb)
+  + onReceiveBlock (block)
   + onBind (scope)
+  .. __private ..
+  - receiveBlock (block, cb)
 }
 @enduml

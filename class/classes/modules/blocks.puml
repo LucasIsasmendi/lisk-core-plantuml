@@ -9,11 +9,40 @@
 class Blocks < modules > {
   - __private: {}
   - self: this
+  + shared
+  + verify
+  + process
+  + utils
+  + chain
   .. this.submodules ..
+  + api: new blocksAPI (logger, db, logic.block, schema, dbSequence)
+  + verify: new blocksVerify (logger, logic.block, logic.transaction, db)
+  + process: new blocksProcess (logger, logic.block, logic.peers,
+  logic.transaction, schema, db, dbSequence, sequence, genesisblock)
+  + utils: new blocksUtils(logger, logic.block, logic.transaction, db,
+  dbSequence, genesisblock)
+  + chain: new blocksChain(logger, logic.block, logic.transaction, db,
+  genesisblock, bus, balancesSequence)
   .. library ..
   - logger
   -- Methods --
   + Blocks(cb, scope)
+  + sandboxApi (call, args, cb)
+  + onBind (scope)
+  + cleanup (cb)
+  + isLoaded ()
+  .. lastBlock ..
+  + get ()
+  + set (lastBlock)
+  .. lastReceipt ..
+  + get ()
+  + update ()
+  + isStale ()
+  .. isActive ..
+  + get ()
+  + set (isActive)
+  .. isCleaning ..
+  + get ()
 }
 
 Blocks ^-- API : new

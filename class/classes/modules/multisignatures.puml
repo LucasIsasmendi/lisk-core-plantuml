@@ -1,10 +1,10 @@
 @startuml
 class Multisignatures < module > {
-  - genesisblock
-  - assetTypes[4]: new Multisignature(schema,
-  network, transaction, logger)
   - __private: {}
   - self: this
+  .. __private ..
+  - assetTypes[4]: new Multisignature (schema,
+  network, transaction, logger)
   .. library ..
   - logger
   - db

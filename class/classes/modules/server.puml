@@ -1,0 +1,14 @@
+@startuml
+class Server < modules > {
+  - __private: {}
+  - self: this
+  -- Methods --
+  + Server (cb, scope)
+  + sandboxApi (call, args, cb)
+  + onBind (scope)
+  + onBlockchainReady ()
+  + cleanup (cb)
+  + isLoaded ()
+  + areModulesReady ()
+}
+@enduml
